@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Books</h1>
+  
+      <form action="/logout" method="Post">
+        {{!-- <button>logout</button> --}}
+        <button><a href="/dashboard">Dashboard</a></button>
+
+        <button><a href="/addBook">Add Book</a></button>
+        <button><a href="/deleteBook">Delete Book</a></button>
+        <button><a href="/editBook">Edit Book</a></button>
+        <button><a href="/logout">Logout</a></button>
+
+
+    </form>
+    <br><br>
+    <form action="/addBook" method="post">
+    <label for="">Book Name: </label>
+    <input type="text" name="BName" id="">
+    
+    <label for="Description">BDescription: </label>
+    <input type="text" name="BDescription" id="">
+
+    <label for="Description">BAvailability: </label>
+    <label for="Description">Yes: </label>
+    <input type="radio"value="Yes" name="BAvailability" id="">
+
+    <label for="Description">No: </label>
+    <input type="radio" value="No" name="BAvailability" id="">
+    <button>Add Book</button> 
+ </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit</h1>
+ <form action="/logout" method="Post">
+        {{!-- <button>logout</button> --}}
+        <button><a href="/dashboard">Dashboard</a></button>
+
+        <button><a href="/addBook">Add Book</a></button>
+        <button><a href="/deleteBook">Delete Book</a></button>
+        <button><a href="/editBook">Edit Book</a></button>
+        <button><a href="/logout">Logout</a></button>
+
+
+    </form>
+    <br><br>
+  
+      {{#each Books}}
+    {{!-- <label for="SearchBook">Search Book</label>
+    <input type="text" name="BName" placeholder="Search by Book Name" id=""> --}}
+
+    <form action="/editBook" method="post">
+    <label for="" >Book ID: </label>
+    <input type="text" name="BId"  value="{{_id}}" id="">
+
+
+    <label for="">Book Name: </label>
+    <input type="text" name="BName" value="{{BName}}" id="">
+    
+    <label for="Description">BDescription: </label>
+    <input type="text" name="BDescription" value="{{BDescription}}" id="">
+
+    <label for="Description">BAvailability: </label>
+    <label for="Description">Yes: </label>
+    <input type="radio"value="Yes" name="BAvailability" value="{{BAvailability}}" id="">
+
+    <label for="Description">No: </label>
+    <input type="radio" value="No" name="BAvailability" value="{{BAvailability}}" id="">
+
+    <label for="AddedBy">AddedBy: </label>
+    <input type="text" name="AddedBy" value="{{AddedBy}}" id="">
+    <button>Edited Book</button> 
+ </form>
+    {{/each}}
+
+</body>
+</html>
